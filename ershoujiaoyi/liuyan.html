@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板</title>
+	<link rel="stylesheet" href="css/liuyan.css">
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+	<div id="da"><img src="image/header.jpg"><a href="#">登录</a></div>
+	<div id="nav"><div id="nav1"><a href="index.php">返回首页</a><p id="wei">1123</p></div></div>
+	<div id="zheng">
+		<div id="aside">
+			<div class="aside1"><div id="an"><h3 id="an1">默认图片</h3><h3 id="an2">历史访客</h3></div>
+				<div id="li1">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				<img src="image/1.jpg">
+				</div>
+				<div id="li2">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				<img src="image/2.jpg">
+				</div>
+			</div>
+			<div id="aside2"><h3>456</h3><div id="nei"></div></div>
+		</div>
+		<div id="text">
+			<div id="kuai">
+				<p>留言</p>
+				<div id="su">
+				<input type="text">
+				<input type="submit" id="sou" value="搜索">
+				</div>
+			</div>
+			<div id="zhong">
+				<div id="yao">
+					<div id="yao1"><p>留言昵称：</p><input type="text" placeholder="留言昵称"></div>
+					<div id="yao2"><p>选择头像：</p>
+						<select id="haa">
+							<option>头像1</option>	
+							<option>头像2</option>	
+							<option>头像3</option>	
+							<option>头像4</option>	
+							<option>头像5</option>	
+							<option>头像6</option>	
+							<option>头像7</option>	
+							<option>头像8</option>	
+							<option>头像9</option>
+						</select></div>
+					<div id="yao3"><p>输入qq号自动获取：</p><input type="text" placeholder="输入qq号自动获取"></div>
+				</div>
+				<div id="kua"><textarea placeholder="请输入留言内容"></textarea>
+				<div id="ku">
+					<div id="kua1"><p>表情</p><img src="image/1.jpg"></div>
+					<div id="kua2"><p>验证码</p><input type="text"><img src="yanzheng.php" onclick="this.src=this.src+'?'+Math.random()"></div>
+					<div id="kua3"><p>字数比：1/120</p></div>
+					<div id="k"><input type="checkbox">私密</div>
+					<div id="kua4"><input type="submit" value="留言"></div>
+				</div>
+			</div>
+			<div id="ji"><p>留言板</p></div>
+				<div class="test">
+					<div class="test1">
+						<img src="image/1.jpg">
+						<div class="ni"><div class="ni1"><h4>留言人昵称</h4><p>#5楼</p></div>
+										<div class="ni2"><h5>留言内容</h5><input type="time"><div class="ni4"><img class="qq" src="image/heart.gif"><p class="q1">2</p></div></div>
+										<div class="ni3"><h4>管理员回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+										<div class="ni5"><h4>其它回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+						</div>
+					</div>
+					<div class="test1">
+						<img src="image/1.jpg">
+						<div class="ni"><div class="ni1"><h4>留言人昵称</h4><p>#5楼</p></div>
+										<div class="ni2"><h5>留言内容</h5><input type="time"><div class="ni4"><img class="qq" src="image/heart.gif"><p class="q1">2</p></div></div>
+										<div class="ni3"><h4>管理员回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+										<div class="ni5"><h4>其它回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+						</div>
+					</div>
+					<div class="test1">
+						<img src="image/1.jpg">
+						<div class="ni"><div class="ni1"><h4>留言人昵称</h4><p>#5楼</p></div>
+										<div class="ni2"><h5>留言内容</h5><input type="time"><div class="ni4"><img class="qq" src="image/heart.gif"><p class="q1">2</p></div></div>
+										<div class="ni3"><h4>管理员回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+										<div class="ni5"><h4>其它回复：</h4><p>时间</p><input type="button" value="撤回"></div>
+						</div>
+					</div>
+					<div id="di"><p>共5页</p><p>首页</p><p>上一页</p><p>下一页</p><p>尾页</p></div>
+				</div>
+					
+
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$("#an2").click(function(){
+				$("#li1").hide();
+				$("#li2").show();
+			})
+			$("#an1").click(function(){
+				$("#li2").hide();
+				$("#li1").show();
+			})
+		})
+	</script>
+	<script>
+		var li=document.getElementById("li1");
+		var b=document.getElementById("haa");
+		// alert(b.length);
+		var a=li.getElementsByTagName("img");
+		for(var i=0;i<b.length;i++)
+			(function(i){
+
+				$(b[i]).click(function(){
+
+					for(var j=0;j<a.length;j++)
+					{
+					if(i==j)
+					 $(a[i]).attr("src","image/01.jpg").css('opacity','0.5');
+					}
+				});
+			})(i)
+			var li=document.getElementById("li1");
+			var b=document.getElementById("haa");
+		   var a=li.getElementsByTagName("img");
+			for(var x=0;x<a.length;x++){
+			(function(x){
+				$(a[x]).click(function(){
+					// for(var y=1;y<b.length+1;y++)
+					// 	(function(y){
+					// 		if(x==y)
+					// 		 {  
+					// 			$(b[y]).val("头像2");
+					// 		}
+					// 	})(y)
+					if(x==0){
+					 $(b).val("头像1");}
+					 if(x==1){
+					 $(b).val("头像2");}
+					 if(x==2){
+					 $(b).val("头像3");}
+					 if(x==3){
+					 $(b).val("头像4");}
+					 if(x==4){
+					 $(b).val("头像5");}
+				});
+			})(x)
+
+		}
+		var q=document.getElementsByClassName("qq");
+	    var q1=document.getElementsByClassName("q1");
+		$q2=$(q1).html();
+		// alert($(q1).html());
+		for(var z=0;z<q.length;z++)
+		(function(z){
+			$(q[z]).click(function(){
+				//$(q[z]).attr("src","image/heart1.gif");
+				for(var w=0;w<q1.length;w++)
+					(function(w){
+						if(w==z){
+						$(q[z]).attr("src","image/heart1.gif");
+						q2=Number($q2)+1;
+						$(q1[w]).html(q2);
+					}
+					})(w)
+				// q2=Number($q2)+1;
+				// $(q1).html(q2);
+			})
+		})(z)
+		var o=document.getElementById("wei");
+		$oo=$("#wei").width();//获取宽度
+		$o1=$(o).html()
+		$(function(){
+			$("#wei").click(function(){
+		     $("#nav1").animate({left:'-200px'});
+		})
+		})
+		// alert($(o).html());
+	</script>
+</body>
+</html

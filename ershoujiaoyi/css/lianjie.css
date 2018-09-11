@@ -1,0 +1,37 @@
+#lianjie{
+    clear: both;
+    height: 280px;
+    width: 1200px;
+    text-align: center;
+    background:rgb(233,233,233);
+ 
+}
+#lianjie h1{
+    width: 1200px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    text-align: center;
+}
+#lianjie #friendshipImg{
+    height: 164px;
+  overflow:hidden;
+  position: relative;
+}
+#lianjie ul{
+     position:absolute;
+}
+#lianjie #friendshipImg ul li{
+    list-style: none;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    float: left;
+    margin-left:50px;
+    margin-top: 10px;
+    border-radius: 150px;
+}
+
+#lianjie #friendshipImg ul li img{
+    border:solid 1px lightblue;
+    border-radius: 150px;
+}

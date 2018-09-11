@@ -1,0 +1,50 @@
+#group table{
+  border-style:dotted;
+}
+
+.ff{
+  padding:0px;
+  background: black;
+  color:white;
+  text-align: center;
+}
+.ff a{
+  color:white;
+}
+#group>table .f{
+  position:relative;
+
+  width:179px;
+  height:177px;  
+}
+
+.f img{
+  width:179px;
+  height:177px;
+  border-radius:4px;
+}
+
+.f .mask
+{
+  position:absolute;
+    left:15px;
+    top:15px;
+  width:179px;
+  height:177px;
+  background: rgba(0, 0, 0, 0.7);
+  color:white;
+  line-height:177px;
+  text-align:center;
+  border-radius: 4px;
+ 
+}
+.mask img{
+  width:50px;
+  height:50px;
+  
+}
+.mask img{
+  position:absolute;
+  bottom:0;
+  right:0;
+}
